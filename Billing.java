@@ -1,57 +1,80 @@
 import java.util.*;
-class Billing
+class Main
 {
-	System.out.print("Enter the number of Doctors: ");
-	int n = sc.nextInt();
-	sc.nextLine();
-	Doctor doc = new Doctor[n];
-	System.out.println("Enter the details of the Doctors: ");
-	for(int i = 0; i < n; i++)
-	{
-		System.out.println("Doctor "+(i+1)+":");
-		System.out.print("Enter the name of the Doctor: ");
-		String name = sc.nextLine();
-		System.out.print("Enter the speciality of the Doctor: ");
-		String sp = sc.nextLine();
-		System.out.print("Enter the fees of the Doctor: ");
-		int n = sc.nextInt();
-		System.out.println("Enter the date of hiring of the Doctor: ");
-		System.out.print("Year: ");
-		int y = sc.nextInt();
-		System.out.print("Month: ");
-		int m = sc.nextInt();
-		System.out.print("Date: ");
-		int d = sc.nextInt();
-		doc[i] = new Doctor(name, sp, y, m, d, n);
-	}
-	System.out.print("Enter the number of patients: ");
-	int n2 = sc.nextInt();
-	Patient p[] = new Patient[n2];
-	System.out.println("Enter the details of the Patients: ");
-	for(int i = 0; i < n2; i++)
-	{
-		System.out.println("Patient "+(i+1)+":");
-		System.out.print("Enter the name of the Patient: ");
-		String name = sc.nextLine();
-		System.out.print("Enter the name of the Doctor you want to consult: ");
-		String name = sc.nextLine();
-		System.out.println("Enter the date of admittance of the Patient: ");
-		System.out.print("Year: ");
-		int y1 = sc.nextInt();
-		System.out.print("Month: ");
-		int m1 = sc.nextInt();
-		System.out.print("Date: ");
-		int d1 = sc.nextInt();
-		System.out.println("Enter the date of release of the Patient: ");
-		System.out.print("Year: ");
-		int y2 = sc.nextInt();
-		System.out.print("Month: ");
-		int m2 = sc.nextInt();
-		System.out.print("Date: ");
-		int d2 = sc.nextInt();
-		p[i] = new p(name, d, y1, m1, d1, y2, m2, d2);
-	}
-	
+    public static void main(String[] args)
+    {
+    	Scanner sc = new Scanner(System.in);
+    	System.out.print("Enter the number of Doctors: ");
+    	int n = sc.nextInt();
+    	sc.nextLine();
+    	Doctor[] doc = new Doctor[n];
+    	System.out.println("Enter the details of the Doctors: ");
+    	for(int i = 0; i < n; i++)
+    	{
+    		System.out.println("Doctor "+(i+1)+":");
+    		System.out.print("Enter the name of the Doctor: ");
+    		String name = sc.nextLine();
+    		System.out.print("Enter the speciality of the Doctor: ");
+    		String sp = sc.nextLine();
+    		System.out.print("Enter the fees of the Doctor: ");
+    		int f = sc.nextInt();
+    		System.out.println("Enter the date of hiring of the Doctor: ");
+    		System.out.print("Year: ");
+    		int y = sc.nextInt();
+    		System.out.print("Month: ");
+    		int m = sc.nextInt();
+    		System.out.print("Date: ");
+    		int d = sc.nextInt();
+    		doc[i] = new Doctor(name, sp, y, m, d, f);
+    		sc.nextLine();
+    	}
+    	System.out.print("Enter the number of patients: ");
+    	int n2 = sc.nextInt();
+    	sc.nextLine();
+    	Patient p[] = new Patient[n2];
+    	System.out.println("Enter the details of the Patients: ");
+    	int temp = -1;
+    	for(int i = 0; i < n2; i++)
+    	{
+    		System.out.println("Patient "+(i+1)+":");
+    		System.out.print("Enter the name of the Patient: ");
+    		String name = sc.nextLine();
+    		System.out.print("Enter the name of the Doctor you want to consult: ");
+    		String d = sc.nextLine();
+    		for(int j = 0; j < n; j++)
+    		{
+    		    if(d.equalsIgnoreCase(doc[j].name))
+    		    {
+    		        temp = j;
+    		        break;
+    		    }
+    		}
+    		if(temp == -1)
+    		{
+    		    temp = 0;
+    		}
+    		System.out.println("Enter the date of admittance of the Patient: ");
+    		System.out.print("Year: ");
+    		int y1 = sc.nextInt();
+    		System.out.print("Month: ");
+    		int m1 = sc.nextInt();
+    		System.out.print("Date: ");
+    		int d1 = sc.nextInt();
+    		sc.nextLine();
+    		p[i] = new Patient(name, doc[temp], y1, m1, d1);
+    	}
+    	System.out.print("Enter the admission fees: ");
+    	p[0].adf = sc.nextInt();
+    	System.out.println("Patient's Bills: ");
+    	for(int i = 0; i < n2; i++)
+    	{
+    	    System.out.println("Name : "+p[i].name);
+    	    System.out.println("Doctor Consulted :"+p[i].d.name);
+    	    System.out.println("Date of Admission: "+p[i].D);
+    	    System.out.println("Number of days stayed: "+p[i].days);
+    	    System.out.println("Total amount to be paid: "+(p[i].adf + (p[i].days*p[i].d.fees)));
+    	}
+    }
 }
 class Person
 {
@@ -60,18 +83,22 @@ class Person
 	Person(String name, int y, int m, int d)
 	{
 		this.name = name;
-		D = Date(y,m,d);
+		D = new Date(y, m, d);
 	}
 }
 class Patient extends Person
 {
 	Doctor d;
 	int amount;
-	boolean equal(Doctor t);
-	Patient(Doctor d)
+	static int adf;
+	Date D2;
+	long days;
+	Patient(String name, Doctor d, int y1, int m1, int d1)
 	{
+		super(name, y1-1900, m1-1, d1);
 		this.d = d;
-		super(nam
+		D2 = new Date();
+		days = (D2.getTime() - D.getTime())/(1000*60*60*24);
 	}
 }
 class Doctor extends Person
@@ -79,15 +106,11 @@ class Doctor extends Person
 	String sp;
 	int fees;
 	int income;
-	Doctor(String name, int y, int m, int d, String speciality, int fees)
+	Doctor(String name, String speciality, int y, int m, int d, int fees)
 	{
-		super(name, y, m, d);
+		super(name, y-1900, m-1, d);
 		sp = speciality;
 		this.fees = fees;
 		income = 0;
-	}
-	Doctor(String name)
-	{
-		this.name = name;
 	}
 }
