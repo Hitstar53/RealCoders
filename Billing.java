@@ -1,5 +1,5 @@
 import java.util.*;
-class Main
+class Billing
 {
     public static void main(String[] args)
     {
@@ -64,7 +64,7 @@ class Main
     		p[i] = new Patient(name, doc[temp], y1, m1, d1);
     	}
     	System.out.print("Enter the admission fees: ");
-    	p[0].adf = sc.nextInt();
+    	int adf = sc.nextInt();
     	System.out.println("Patient's Bills: ");
     	for(int i = 0; i < n2; i++)
     	{
@@ -72,7 +72,22 @@ class Main
     	    System.out.println("Doctor Consulted :"+p[i].d.name);
     	    System.out.println("Date of Admission: "+p[i].D);
     	    System.out.println("Number of days stayed: "+p[i].days);
-    	    System.out.println("Total amount to be paid: "+(p[i].adf + (p[i].days*p[i].d.fees)));
+    	    System.out.println("Total amount to be paid: Rs."+(p[i].days*(p[i].d.fees + adf)));
+    	    for(int j = 0; j < n; j++)
+    	    {
+    	    	if(p[i].eq(doc[j]))
+    	    	{
+    	    		doc[j].income += (p[i].d.fees * p[i].days);
+    	    	}
+    	    }
+    	}
+    	System.out.println("Fees of Doctor: ");
+    	for(int i = 0; i < n; i++)
+    	{
+    		System.out.println("\nDoctor "+(i+1));
+    		System.out.println("Name: "+doc[i].name);
+    		System.out.println("Date of Hiring: "+doc[i].D);
+    		System.out.println("Total Income: "+doc[i].income);
     	}
     }
 }
@@ -89,8 +104,6 @@ class Person
 class Patient extends Person
 {
 	Doctor d;
-	int amount;
-	static int adf;
 	Date D2;
 	long days;
 	Patient(String name, Doctor d, int y1, int m1, int d1)
@@ -99,6 +112,14 @@ class Patient extends Person
 		this.d = d;
 		D2 = new Date();
 		days = (D2.getTime() - D.getTime())/(1000*60*60*24);
+	}
+	boolean eq(Doctor d)
+	{
+		if((this.d).name == d.name)
+		{
+			return true;
+		}
+		return false;
 	}
 }
 class Doctor extends Person
