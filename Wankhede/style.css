@@ -1,0 +1,41 @@
+#info{
+    background-color: #3500d3;
+    justify-content: space-evenly;
+    color: rgb(205, 193, 193);
+    border: 3px solid #0C0032;
+    border-radius: 15px;
+    flex: auto;
+    width: 50%;
+    font-family: "Georgia";
+    font-size: larger;
+}
+#venue{
+   
+    background-color: #3500d3;
+    justify-content: space-evenly;
+    border: 3px solid #0C0032;
+    color: rgb(205, 193, 193);
+    border-radius: 15px;
+    flex: auto;
+    width: 40%;
+    font-family: "Georgia";
+    font-size: larger;
+}
+#about{
+    font-family: "Georgia";
+    color: rgb(205, 193, 193);
+}
+body{
+    background-image: linear-gradient(45deg,#190061, #04619F);
+}
+img{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    justify-self: auto;
+    border: 3px solid #9f89df;
+    border-radius: 15px;
+}
