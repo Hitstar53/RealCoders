@@ -10,3 +10,13 @@ function change(){
     image=document.getElementById("wkd")
     image.src=imgList[index]
 }
+function changeb(){
+    
+    if(index==0){
+        index=imgList.length
+    }
+    index=index-1
+    console.log(1)
+    image=document.getElementById("wkd")
+    image.src=imgList[index]
+}

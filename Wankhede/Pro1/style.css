@@ -1,41 +1,79 @@
 #info{
-    background-color: #3500d3;
+    background-color: #e9fdfc;
     justify-content: space-evenly;
-    color: rgb(205, 193, 193);
-    border: 3px solid #0C0032;
+    color: #127981;
+    border: 3px solid #008080;
     border-radius: 15px;
     flex: auto;
     width: 50%;
-    font-family: "Georgia";
+    font-family: "Ariel";
     font-size: larger;
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: flex-start;
+    text-align: left;
+    
+}
+.toggle{
+    border-radius: 100%;
+    color: #008080;
+    border-color: #0cae91;
+    top: 200px;
+    flex: auto;
+    padding-top: 7px;
+    text-align: center;
+    justify-self: auto;
+    position: relative;
+    display: flex;
+    min-height: 35px;
+    min-width: 35px;
+    justify-content: center;
+}
+#fwd{
+    
+    
+    left:1200px;
+}
+#bkd{
+    
+    top: 170px;
+    left:20px;
 }
 #venue{
-   
-    background-color: #3500d3;
+    padding-right: 25px;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 50px;
+    background-color: #e9fdfc;
     justify-content: space-evenly;
-    border: 3px solid #0C0032;
-    color: rgb(205, 193, 193);
+    border: 3px solid #008080;
+    color: #008080;
     border-radius: 15px;
     flex: auto;
     width: 40%;
-    font-family: "Georgia";
+    font-family: "Ariel";
     font-size: larger;
+    padding-left: 25px;
+    
 }
 #about{
-    font-family: "Georgia";
-    color: rgb(205, 193, 193);
+    font-family: "Ariel";
+    color: #FFFFFF;
+    padding-left: 25px;
 }
 body{
-    background-image: linear-gradient(45deg,#190061, #04619F);
+    background-image: linear-gradient(#0cae91, #043057);
 }
 img{
+    padding: 0%;
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
+    height: 300px;
     display: flex;
     flex-wrap: wrap;
     flex: auto;
     justify-self: auto;
-    border: 3px solid #9f89df;
+    border: 3px solid#fdfdfd;
     border-radius: 15px;
 }
