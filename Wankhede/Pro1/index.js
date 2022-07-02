@@ -6,7 +6,7 @@ function change(){
     if(index==imgList.length){
         index=0
     }
-    console.log(1)
+    console.log(2)
     image=document.getElementById("wkd")
     image.src=imgList[index]
 }

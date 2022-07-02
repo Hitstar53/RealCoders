@@ -1,5 +1,5 @@
 #info{
-    background-color: #e9fdfc;
+    background-color: #FFFFFF;
     justify-content: space-evenly;
     color: #127981;
     border: 3px solid #008080;
@@ -44,7 +44,7 @@
     justify-content: flex-start;
     text-align: left;
     padding-left: 50px;
-    background-color: #e9fdfc;
+    background-color: #FFFFFF;
     justify-content: space-evenly;
     border: 3px solid #008080;
     color: #008080;
@@ -76,4 +76,22 @@ img{
     justify-self: auto;
     border: 3px solid#fdfdfd;
     border-radius: 15px;
+}
+.topnav {
+    background-color:#FFFFFF;
+    border-radius: 20px;
+    height: 35px;
+    overflow: hidden;
+}  
+
+.topnav li:hover {
+    background-color: #127981;
+    color: #FFFFFF;
+  }
+li{
+    color: #008080;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px;
+    margin-left: 25px;
 }
