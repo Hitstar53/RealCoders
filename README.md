@@ -7,5 +7,5 @@ My Topic: Chhatrapati Shivaji Maharaj Terminus Station
 -> Make the web page by 4th July
 
 # Progress:
--> made a static page with Header, text and image till Wednesday 29th July
--> added an automatic slideshow till Sunday 3rd July
+1. made a static page with Header, text and image till Wednesday 29th July
+2. added an automatic slideshow till Sunday 3rd July
