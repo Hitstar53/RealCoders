@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Lobster&display=swap');
+
+body {
+    background-color: black;
+}
+
+.container {
+    height: 90vh;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 90vh;
+}
+
+.left {
+    background-color: #316ac5;
+    grid-column:  1/4;
+    background-image: url(images/Painting.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.right {
+    background-color: #121212;
+    grid-column:  4/7;
+}
+.right > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-box {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:wh;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-family: 'Lobster', cursive;
+    opacity: 70%;
+}
+
+.text-box > div {
+    text-align: center;
+}
+
+.text-box > div > h2 {
+    font-size: 32px;
+    text-align: center;
+    color: #fff
+}
+
+.text-box > div > p {
+    font-size: 20px;
+    margin-top: 60px;
+    text-align: center;
+    color: grey;
+}
+
+.text-box > div > button {
+    margin-top: 30px;
+    padding: 10px 32px ;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color:inherit;
+    color:rgb(255, 255, 255);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+
+.text {
+    position: absolute;
+    top: 50%;
+    right: 44.5%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 36px;
+    background: linear-gradient(to right, rgb(255, 193, 255), #EE0149);
+    -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+}
+.right_imagee
+{
+   
+    background-color: #121212;
+    grid-column:  4/7;
+    background-image: url(images/national-gallery-of-modern.jpg);
+    background-position: center;
+    background-size: cover;
+   
+    
+    
+}
