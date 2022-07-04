@@ -5,10 +5,6 @@
     list-style: none;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    background: url(https://www.thehindubusinessline.com/migration_catalog/article18321145.ece/alternates/BASE_LANDSCAPE/BL30_FlightPlan_Bazaar);
-    background-size: cover;
-}
 .navbar{
     width: 100%;
     height: 80px;
@@ -47,4 +43,82 @@ body{
     background-color: #000;
     color: #fee;
     transition: 0.25s;
+}
+.body {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)), url(https://www.thehindubusinessline.com/migration_catalog/article18321145.ece/alternates/BASE_LANDSCAPE/BL30_FlightPlan_Bazaar);
+    background-position:center;
+    background-size: cover;
+    background-size: cover;
+}
+.heading {
+    width:30%;
+    text-align:center;
+    color:#fff;
+}
+.heading h1{
+    font-size:40px;
+}
+.heading a{
+    text-decoration:none;
+    color:#fff;
+    font-size:20px;
+    border:2px solid #fff;
+    padding:10px;
+    border-radius:25px;
+}
+.heading a:hover{
+    background-color:#fff;
+    color:#000;
+    letter-spacing: 2px;
+    transition:0.25s;
+}
+.tours{
+    width:70%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+.places {
+    display: inline;
+    text-align: center;
+    border-radius: 12px;
+}
+.places h2 {
+    color:white;
+    font-size:35px;
+    Letter-spacing:3px;
+    border-radius:1px;
+    padding:10px 10px;
+}
+.places a{
+    text-decoration:none;
+    color:white;
+    font-size:20px;
+    border:2px solid white;
+    padding:10px 10px;
+    border-radius:25px;
+}
+.places a:hover{
+    background-color:white;
+    color:#000;
+    letter-spacing: 2px;
+    transition:0.25s;
+}
+.footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer a{
+    text-decoration:none;
+    color:green;
+    font-size:18px;
+    font-weight:bold;
 }
