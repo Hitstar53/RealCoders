@@ -5,8 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourism</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <section>
+        <div class="bg"></div>
+        <header>
+            <a href="#" class="logo">Travel</a>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="text">
+                <h2>Chhatrapati Shivaji Maharaj Terminus</h2>
+                <p>This city is overflowing with numerous extravagant structures built by the British during their dominance in India. Take the Victoria Terminus for instance; or Chhatrapati Shivaji Terminus as it is famously known now.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div class="img1">
+                <img src="/images/CST.jpg" class="fruits">
+            </div>
+        </div>
+        <ul class="scroll">
+            <li data-text="csmt" class="active"><img src="/images/CST.jpg" onclick="imgSlider('/images/CST.jpg');changeColor('#fc4a55')"></li>
+            <li data-text="marine lines"><img src="/images/marine lines.jpg" onclick="imgSlider('/images/marine lines.jpg');changeColor('#ffcc02')"></li>
+            <li data-text="getway"><img src="/images/getway.jpg" onclick="imgSlider('/images/getway.jpg');changeColor('#92ba3c')"></li>
+            <li data-text="sahiyadri"><img src="/images/sahiyadri.jpg" onclick="imgSlider('/images/sahiyadri.jpg');changeColor('#fb6cb2')"></li>
+            <li data-text="CST"><img src="/images/CST.jpg" onclick="imgSlider('/images/CST.jpg');changeColor('#ffb42b')"></li>
+        </ul>
+    </section>
+    <script>
+        function imgSlider(anything) {
+            document.querySelector('.fruits').src=anything;
+        }
+        function changeColor(color) {
+            const bg=document.querySelector('.bg');
+            bg.style.background=color;
+        }
+        let el=document.querySelectorAll('.scroll li');
+        for (let i = 0; i < el.length; i++) {
+            el[i].onclick=function() {
+                var c=0;
+                while (c<el.length) {
+                    el[c++].className='check';
+                }
+                el[i].className='check active';
+            }
+        }
+    </script>
 </body>
 </html>
