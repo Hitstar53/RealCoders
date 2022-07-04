@@ -1,0 +1,129 @@
+*{
+    margin : 0;
+    padding : 0;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.container{
+    width: 100%;
+    height: 1048px;
+    background-image: linear-gradient(rgba(18, 149, 175, 0.477),rgba(114, 154, 168, 0.509)),url(Marines/background.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 4%;
+    padding-right: 2%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+}
+.navbar{
+    height: 200px;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+
+
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: rgb(253, 249, 249);
+    font-size: 12px ;
+}
+.row{
+    display: inline-flex;
+    height: 79%;
+    align-items: center;
+
+}
+.column{
+    flex-basis: 50%;
+}
+h1{
+    color: black; 
+    font-size: 45px;
+}
+h3{
+    color:rgb(247, 247, 247);
+}
+p{
+    color: #f4f3f0;
+    font-size: 11px;
+    line-height: 15px;
+}
+button{
+    width: 180px;
+    color: darkblue;
+    font-size: 15px;
+    padding: 12px 0;
+    background: rgba(250, 250, 249, 0.986);
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+
+.Card{
+    width: 200px;
+    height: 230px;
+    display: i;
+    display: inline-block;
+    justify-content: initial;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+.card1{
+    background-image: url(Marines/pic-1.jpg);
+    margin-left: 70px;
+}
+.card2{
+    background-image: url(Marines/pic-2.jpg);
+}
+.card3{
+    background-image: url(Marines/pic-3.jpg);
+    margin-left: 70px;
+}
+.card4{
+    background-image: url(Marines/pic-4.jpg);
+}
+.Card:hover{
+    transform: translateY(-10px);
+}
+nav ul li a:hover{
+    color: #ffff00;
+
+}
+button:hover{
+    color:rgb(4, 2, 2);
+    background-color: #2B65EC;
+}
+h5{
+    color:rgb(251, 253, 253);
+    text-shadow: 0 0 100px rgb(27, 0, 29);
+    font-size: 16px;
+}
