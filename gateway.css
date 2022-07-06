@@ -1,0 +1,51 @@
+
+h1
+{
+  text-shadow:5px 3px 2px grey;
+  font-weight:200;
+  text-transform:uppercase;
+  border:5px solid;
+  text-decoration:blink;
+  color:white;
+  background-color:black;
+  
+}
+body
+{
+   background-image:url("Background.png");
+ 
+  font-family:"Source Code Pro";
+  border:3px solid;
+  text-align:center;
+  
+}
+img
+{
+ height:500px;
+ border-radius:20px;
+}
+p
+{
+  background-color: #000000;
+  border:2px solid;
+  font-size:20px;
+  color:#FFFFFF;
+  font-family:"Arial";
+  
+}
+button
+{
+  text-transform:uppercase;
+  text-align:center;
+  font-size:20px;
+  /*text-decoration:underline;*/
+  text-border:none
+  text-font:Poppins;
+  text-height:20px;  
+  outline:none;                
+
+} 
+button:hover{
+transition:3s;
+backgroun-color:#2E1263;
+}
