@@ -1,109 +1,167 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+:root {
+  --dropShadow: drop-shadow(0 7px 12px rgba(0, 0, 0, 0.25));
+  --dropShadowLight: drop-shadow(0 7px 12px rgba(0, 0, 0, 0.15));
+  --primaryColor: #fcc616;
+  ---offWhite: #f6f6f6;
+  --blackAlternate: #333;
+  --smallBorderRadius: 0.75rem;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Lobster&display=swap');
-
-body {
-    background-color: black;
+.flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
-    height: 90vh;
+.ne__container {
+  width: 100%;
 }
 
-.header {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 90vh;
+.ne__neimageContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -50;
 }
 
-.left {
-    background-color: #316ac5;
-    grid-column:  1/4;
-    background-image: url(images/Painting.jpg);
-    background-position: center;
-    background-size: cover;
+.ne__neimage {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
-.right {
-    background-color: #121212;
-    grid-column:  4/7;
-}
-.right > div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text-box {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:wh;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    font-family: 'Lobster', cursive;
-    opacity: 70%;
+.ne__navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0.02);
+  backdrop-filter: saturate(180%) blur(2px);
 }
 
-.text-box > div {
-    text-align: center;
+.ne__container {
+  position: relative;
 }
 
-.text-box > div > h2 {
-    font-size: 32px;
-    text-align: center;
-    color: #fff
+.ne_logoContainer {
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.text-box > div > p {
-    font-size: 20px;
-    margin-top: 60px;
-    text-align: center;
-    color: grey;
+.ne_logo {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 146px;
+  height: 73px;
 }
 
-.text-box > div > button {
-    margin-top: 30px;
-    padding: 10px 32px ;
-    border: 2px solid white;
-    border-radius: 8px;
-    font-weight: bold;
-    background-color:inherit;
-    color:rgb(255, 255, 255);
+.ne__navbar__pText p {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  width: max-content;
+  margin: 0 1rem;
+  font-size: medium;
+  color: white;
+  cursor: pointer;
+  /* border-radius: 0.01px; */
+  /* border-radius: 3px; */
 }
 
-.center{
-    display: flex;
-    justify-content: center;
+.ne__navbar__pText :nth-child(1) {
+  outline: 2px solid var(--primaryColor);
+  outline-offset: 0.5rem;
 }
 
-
-.text {
-    position: absolute;
-    top: 50%;
-    right: 44.5%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 36px;
-    background: linear-gradient(to right, rgb(255, 193, 255), #EE0149);
-    -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+.ne__navbar__pText p:hover {
+  /* border: solid 1px var(--primaryColor); */
+  outline: 2px solid var(--primaryColor);
+  outline-offset: 0.5rem;
 }
-.right_imagee
-{
-   
-    background-color: #121212;
-    grid-column:  4/7;
-    background-image: url(images/national-gallery-of-modern.jpg);
-    background-position: center;
-    background-size: cover;
-   
-    
-    
+
+.ctaBtn {
+  cursor: pointer;
+  background: var(--primaryColor);
+  padding: 0.5rem 0.5rem;
+  border-radius: 3px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.ctaBtn p {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  width: max-content;
+  margin: 0 1rem;
+  font-size: medium;
+  color: var(--blackAlternate);
+}
+.ctaBtn:hover {
+  color: white;
+  background: #ff3300;
+}
+
+.ctaBtn:hover p {
+  color: white;
+}
+
+.ne__infoSection {
+  width: 100%;
+  height: 100vh;
+  background: #090c0e;
+  margin-top: 100vh;
+}
+
+.ne__infoSection p {
+  width: 865px;
+}
+
+.infoSection__pText p {
+  color: white;
+  font-family: "Open Sans";
+  font-size: medium;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.ne__headingContainer h1 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: large;
+}
+
+.ne__headingContainer img {
+  height: 44px;
+}
+
+.ne__headingContainer p {
+  color: var(--primaryColor);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "Open Sans", sans-serif;
+  font-size: small;
+}
+
+.ne__bg__h1Text {
+  color: var(--primaryColor);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-size: 4rem;
+  letter-spacing: 1rem;
 }
